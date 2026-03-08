@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  semantic-search:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist ChromaDB and clustering artefacts across container restarts
+      - chroma_data:/app/chroma_db
+      - artifacts_data:/app/artifacts
+    environment:
+      - PYTHONUNBUFFERED=1
+
+volumes:
+  chroma_data:
+  artifacts_data:
