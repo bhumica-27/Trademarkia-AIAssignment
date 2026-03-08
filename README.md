@@ -27,10 +27,10 @@ Data/mini_newsgroups/        <-- 2,000 cleaned newsgroup posts
 ```bash
 python -m venv venv
 
-# Windows
+# for Windows
 venv\Scripts\activate
 
-# Linux / macOS
+# and for Linux/macOS
 source venv/bin/activate
 ```
 
@@ -170,16 +170,16 @@ docker run -p 8000:8000 newsgroups-search
 ```
 app/
   __init__.py
-  config.py             # All configuration constants
-  data_loader.py        # Dataset loading and cleaning
-  embeddings.py         # Embedding model + ChromaDB
-  clustering.py         # PCA + GMM fuzzy clustering
-  semantic_cache.py     # Custom semantic cache (no libraries)
-  main.py               # FastAPI application
+  config.py             
+  data_loader.py        
+  embeddings.py         
+  clustering.py         
+  semantic_cache.py     
+  main.py               
 scripts/
-  setup_pipeline.py     # One-time data processing pipeline
-  analyze_clusters.py   # Cluster quality analysis
-Data/                   # 20 Newsgroups dataset
+  setup_pipeline.py     
+  analyze_clusters.py   
+Data/                  
 requirements.txt
 Dockerfile
 docker-compose.yml
